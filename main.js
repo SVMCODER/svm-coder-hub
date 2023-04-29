@@ -1,3 +1,4 @@
+
 function login() {
     uname = document.getElementById('name').value;
     if (uname.length < 3 || uname.length > 16) {
@@ -11,7 +12,7 @@ function login() {
         localStorage.setItem('loggedin','yes')
         setTimeout(() => {
             window.location.replace('home.html')
-        }, "2300");
+        }, 1500);
     }
     else if(uname == 'svmchub01') {
         swal("Welcome Our Teacher Lashmi", "Please wait while I go to the school and get the Key.", "success")
@@ -21,7 +22,7 @@ function login() {
         localStorage.setItem('loggedin','yes')
         setTimeout(() => {
             window.location.replace('home.html')
-        }, "2300");
+        }, 1500);
     }
     else {
         swal("Welcome "+uname, "Redirecting, Please wait!", "success")
@@ -31,7 +32,7 @@ function login() {
         localStorage.setItem('loggedin','yes')
         setTimeout(() => {
             window.location.replace('home.html')
-        }, "2300");
+        }, 1500);
     }
 }
 
@@ -41,3 +42,36 @@ function refresh() {
         window.location.reload()
     }, 1500);
 }
+function logout() {
+    swal({
+		title: "Logout?",
+		text: "You will lose all your saved projects.",
+		type: "warning",
+		showCancelButton: true,
+		confirmButtonColor: '#DD6B55',
+		confirmButtonText: 'Logout',
+		cancelButtonText: "Cancel",
+		closeOnConfirm: false,
+		closeOnCancel: false
+	},
+	function(isConfirm){
+    if (isConfirm){
+      localStorage.removeItem('name')
+      localStorage.removeItem('loggedin')
+      localStorage.removeItem('role')
+      localStorage.removeItem('badge')
+      localStorage.removeItem('code')
+      localStorage.removeItem('projects')
+      localStorage.removeItem('prjcts12')
+      localStorage.removeItem('hp')
+      localStorage.removeItem('m')
+      swal("Logging out", "We're cleaning up the data registered with this device.", "warning")
+      setTimeout(() => {
+        window.location.replace('/')
+      }, 1500);
+
+    } else {
+      swal("Cancelled!", "You're now able to code again.", "success");
+    }
+	});
+};

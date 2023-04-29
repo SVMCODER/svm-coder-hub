@@ -20,11 +20,11 @@
       <i class='bx bxs-home'></i>
       <p></p>
     </div>
-    <div class="tab" >
-      <i class='bx bx-notepad' onclick="window.location.replace('newproject.html')"></i>
+    <div class="tab active purple" >
+      <i class='bx bx-notepad'></i>
       <p></p>
     </div>
-    <div class="tab active purple" >
+    <div class="tab" onclick="window.location.replace('projects.html')">
       <i class='bx bx-heart' ></i>
       <p></p>
     </div>
@@ -34,27 +34,30 @@
     </div>
   </div>
   <div class="head">
-    <h3 >SVM CODER HUB</h3>
+    <h3>SVM CODER HUB</h3>
     <h3 class="right" onclick="refresh()"><i class='bx bx-refresh' ></i></h3>
   </div>
   <br><br> <br>
-  <h4 align="center">My Projects</h4>
-<div id="projects" align="center">
+  <div class="editor-prv" align="center">
+    <input type="text" id="pname" placeholder="Project Name" value="My cool Project">
+    <button onclick="window.location.replace('newproject.html')">Editor</button>
+    <button class="active">Preview</button>
+    
+  </div>
+    <div align="center" class="box">
+      <abbr title="Please run the code to see latest updates!"><iframe src="" id="prv" frameborder="0"></iframe></abbr>
+  </div>
+  <div id="runbtn" onclick="save()"><abbr title="Save the code!"><p class="bx bx-save"></p></abbr></div>
   
-</div>
-  <div id="runbtn" onclick="create()"><abbr title="Create New Project"><p class="bx bx-plus"></p></abbr></div>
-  <br><br><br>
-<style>
-  body {
-    color: white;
-  }
-</style >
   <script src="main.js"></script>
   <script>
   if (localStorage.getItem('loggedin')!='yes') {
     window.location.replace('/')
 }
-document.getElementById('projects').innerHTML = localStorage.getItem('prjcts12')
+let iframe=document.getElementById('prv').contentWindow.document;
+    iframe.open();
+    iframe.write(localStorage.getItem('code'));
+    iframe.close();
 </script>
 <script src="handler.js"></script>
 </body>

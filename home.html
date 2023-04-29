@@ -18,19 +18,19 @@
     <div class="tab-nav-container">
     <div class="tab active purple" >
       <i class='bx bxs-home'></i>
-<p></p>
+      <p></p>
     </div>
-    <div class="tab" onclick="window.location.replace('code.html')">
-      <i class='bx bx-code-alt'></i>
-<p></p>
+    <div class="tab" onclick="window.location.replace('newproject.html')">
+      <i class='bx bx-notepad'></i>
+      <p></p>
     </div>
     <div class="tab" onclick="window.location.replace('projects.html')">
-      <i class='bx bxs-book' ></i>
-<p></p>
+      <i class='bx bx-heart' ></i>
+      <p></p>
     </div>
     <div class="tab" onclick="window.location.replace('profile.html')">
-      <i class='bx bxs-user' ></i>
-<p></p>
+      <i class='bx bx-user' ></i>
+      <p></p>
     </div>
   </div>
   <div class="head">
@@ -38,48 +38,22 @@
     <h3 class="right" onclick="refresh()"><i class='bx bx-refresh' ></i></h3>
   </div><br><br> <br>
   <main align="center">
-  <h4 align="center" id="name"></h4>
+    <h4></h4><br><br><br><br>
   <div class="box" align="center">
     <div class="container" align="center">
       <img src="https://play-lh.googleusercontent.com/tebfIPi3C9Pe_m_WMbI0n70Ssnq-gxUvH3Dk6g63ExbmVYGl5SCavIBWZ7RegibUeQ=w600-h300-pc0xffffff-pd" alt="">
       <br>
-      <h4>SVM Coder Hub</h4>
-      <p>Learn coding and code in your mobile phone easily!</p>
-      <button onclick="window.location.replace('projects.html')"><i class='bx bx-code' ></i> Start Coding</button>
-    </div>
-    <h4>Features</h4>
-    <div class="container" align="center">
-      <img src="https://cdn4.iconfinder.com/data/icons/flaturici-set-2/512/code-512.png" alt="">
-      <br>
-      <h4>Live Editor</h4>
-      <p>Updates your code whenever a change is made in it!</p>
-    </div>
-    <br>
-    <div class="container" align="center">
-      <img src="https://user-images.githubusercontent.com/30186107/29488525-f55a69d0-84da-11e7-8a39-5476f663b5eb.png" alt="">
-      <br>
-      <h4>HTML, CSS & JS</h4>
-      <p>3 Popular Web-Designing Languages available here!</p>
-    </div>
-    <br>
-    <div class="container" align="center">
-      <img src="https://cdn4.iconfinder.com/data/icons/we-re-the-best/512/best-fastest-fast-speed-gauge-high-performance-top-gear-warm-temperature-rapid-512.png" alt="">
-      <br>
-      <h4>Efficient</h4>
-      <p>It is fast to give you the best Lag - Free experience!</p>
-    </div>
-    <h4>Gallery</h4>
-    <div class="container" align="center">
-      <img src="https://pluspng.com/img-png/logo-a-project-png-our-partners-1698.png" alt="">
-      <br>
-      <h4>Awesome Projects</h4>
-      <p>Checkout some cool projects made by you only!</p>
-      <button onclick="window.location.replace('projects.html')"><i class='bx bxs-photo-album'></i> View</button>
+      <h4 id="name">SVM Coder Hub</h4>
+      <p>Coding on mobile phones made easy. Start now!</p>
+      <button onclick="create()"><i class='bx bx-plus' ></i> New Project</button><br><p></p>
+      <button onclick="window.location.replace('learn.html')"><i class='bx bxs-book'></i> Learn Coding</button><br><p></p>
+      <button onclick="window.location.replace('logs.html')"><i class='bx bx-refresh' ></i> Recents Log</button><p></p>
     </div>
   </div>
   </main>
   <br><br><br><br>
   <script src="main.js"></script>
+  <script src="handler.js"></script>
   <script>document.getElementById('name').innerHTML = 'Welcome '+ localStorage.getItem('name');
   if (localStorage.getItem('loggedin')!='yes') {
     window.location.replace('/')

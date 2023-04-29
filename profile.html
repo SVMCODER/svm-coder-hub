@@ -15,23 +15,23 @@
     <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
 </head>
 <body >
-    <div class="tab-nav-container">
+  <div class="tab-nav-container">
     <div class="tab purple" onclick="window.location.replace('home.html')">
       <i class='bx bxs-home'></i>
-<p></p>
+      <p></p>
     </div>
-    <div class="tab" onclick="window.location.replace('code.html')">
-      <i class='bx bx-code-alt'></i>
-<p></p>
+    <div class="tab" >
+      <i class='bx bx-notepad' onclick="window.location.replace('newproject.html')"></i>
+      <p></p>
     </div>
-    <div class="tab purple" onclick="window.location.replace('projects.html')">
-        <i class='bx bxs-book' ></i>
-<p></p>
-      </div>
-      <div class="tab active purple" >
-        <i class='bx bxs-user' ></i>
-<p></p>
-      </div>
+    <div class="tab" >
+      <i class='bx bx-heart' onclick="window.location.replace('projects.html')"></i>
+      <p></p>
+    </div>
+    <div class="tab active purple">
+      <i class='bx bx-user' ></i>
+      <p></p>
+    </div>
   </div>
   <div class="head">
     <h3>SVM CODER HUB</h3>
@@ -41,51 +41,27 @@
   <div class="box" align="center">
     <div class="container" align="center">
         <div class="hd">
-            <h4 class="bx bx-user"> User Profile </h4>
+            <h4 class="bx bx-user" style="color: white"> User Profile </h4>
             <h4 class="right" style="color: red;" onclick="logout()"><i class='bx bxs-log-out' ></i> Logout</h4>
           </div>
           <img src="https://freeaccountshub.com/wp-content/uploads/2021/03/53184-user.gif" alt="">
     
-          <h4 id="name"></h4>
+          <h4 id="name" ></h4>
           <h4 id="role"></h4>
           <h4 id="badge"></h4>
      </div>
     </div>
   </main>
   <br><br><br>
-  <style>
-    .container {
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-	background-color: #ffffff;
-	width: 85%;
-	height: fit-content;
-	color: black;
-	padding: 0.9em 1em;
-}
-  </style>
   <script src="main.js"></script>
   <script>
   if (localStorage.getItem('loggedin')!='yes') {
     window.location.replace('/')
   }
-    document.getElementById('name').innerHTML = localStorage.getItem('name')
-    document.getElementById('role').innerHTML = localStorage.getItem('role')
-    document.getElementById('badge').innerHTML = localStorage.getItem('badge')
-function logout() {
-    localStorage.removeItem('loggedin')
-    localStorage.removeItem('badge')
-    localStorage.removeItem('name')
-    localStorage.removeItem('role')
-    localStorage.removeItem('project')
-    swal({
-        title: "Logging Out!",
-        text: `We're sad to see you go.`,
-        imageUrl: 'https://media.tenor.com/images/fc1d577e8b42f847e1ef1615b76a9483/tenor.gif'
-    });
-    setTimeout(() => {
-        window.location.replace('/')
-    }, 2300);
-}
+    document.getElementById('name').innerHTML = 'Name: '+localStorage.getItem('name')
+    document.getElementById('role').innerHTML = 'Role: '+localStorage.getItem('role')
+    document.getElementById('badge').innerHTML = 'Badge: '+localStorage.getItem('badge')
+
 </script>
 </body>
 </html>
