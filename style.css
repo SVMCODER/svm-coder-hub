@@ -1,7 +1,7 @@
 body,html {
 	background-color: rgb(2, 2, 2);
 	color: rgb(0, 0, 0);
-	height: 90%;
+	height: 98.50%;
 }
 .tab-nav-container{
 	color: rgb(0, 0, 0);
@@ -184,7 +184,7 @@ input {
 	padding: 0.2em 1em;
 	outline: none;
 	color: white;
-	border:none;
+	border: none;
 	font-family: cursive;
 }
 .icon {
