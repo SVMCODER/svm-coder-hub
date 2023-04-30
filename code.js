@@ -1,7 +1,7 @@
 function run() {
     codef = document.getElementById('codef').value;
     localStorage.setItem('code',`${codef}`)
-    localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+    localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -15,7 +15,7 @@ function run() {
 }
 function prv() {
   codef = document.getElementById('codef').value;
-  localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+  localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
