@@ -8,7 +8,7 @@ function save() {
            <img class="icon" src="https://cdn0.iconfinder.com/data/icons/file-type-19/512/file__html__web_-512.png" alt="">
            <p style="color:yellow">Name: ${pname.replace(' ','-')}.html</p>
            <p style="color: rgb(0, 195, 255)">Created on: ${Date().replace('GMT+0530 (India Standard Time)','')}</p>
-           <button class="bx bxs-copy-alt" onclick="localStorage.getItem('code').select();localStorage.getItem('code').setSelectionRange(0,99999);navigator.clipboard.writeText( localStorage.getItem('code') ); swal('Copied!', 'Code is copied to your clipboard.', 'success')">Copy Code</button>
+           <button class="bx bxs-copy-alt" onclick="let codes1 = document.createElement('textarea');codes1.value = localStorage.getItem('code');document.body.appendChild(codes1);codes1.select();document.execCommand('copy');document.body.removeChild(codes1); swal('Copied!', 'Code is copied to your clipboard.', 'success')">Copy Code</button>
           <p></p> <textarea>${localStorage.getItem('code')}</textarea>
         </div>
     <br>
@@ -55,4 +55,3 @@ setTimeout(() => {
 if (localStorage.getItem('hp') != 'yes2') {
   localStorage.setItem('prjcts12','No Projects Found!')
 }
-
