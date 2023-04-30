@@ -3,7 +3,7 @@ function login() {
     uname = document.getElementById('name').value;
     if (uname.length < 3 || uname.length > 16) {
         swal("Invalid!", "Usernames can only contain 3-16 letters.", "error")
-        localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+        localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -20,7 +20,7 @@ function login() {
         localStorage.setItem('role','Developer')
         localStorage.setItem('badge','Founder')
         localStorage.setItem('loggedin','yes')
-        localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+        localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -40,7 +40,7 @@ function login() {
         localStorage.setItem('role','Teacher')
         localStorage.setItem('badge','Founder')
         localStorage.setItem('loggedin','yes')
-        localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+        localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -60,7 +60,7 @@ function login() {
         localStorage.setItem('role','Student')
         localStorage.setItem('badge','User')
         localStorage.setItem('loggedin','yes')
-        localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+        localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -77,7 +77,7 @@ function login() {
 }
 
 function refresh() {
-    localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+    localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -93,7 +93,7 @@ function refresh() {
     }, 1500);
 }
 function logout() {
-    localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+    localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -116,7 +116,7 @@ function logout() {
 	},
 	function(isConfirm){
     if (isConfirm){
-        localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+        localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -141,7 +141,7 @@ function logout() {
       }, 1500);
 
     } else {
-        localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+        localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -155,3 +155,4 @@ function logout() {
     }
 	});
 };
+
