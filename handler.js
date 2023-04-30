@@ -13,7 +13,7 @@ function save() {
         </div>
     <br>
     `)
-    localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+    localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -38,7 +38,7 @@ function create() {
     text: `Creating your project, please wait!`,
     imageUrl: 'https://cdn.dribbble.com/users/1186261/screenshots/3718681/_______.gif'
 });
-localStorage.setItem('log',localStorage.getItem('log').replace('No Projects Found!','')+`
+localStorage.setItem('log',localStorage.getItem('log')+`
     <div class="container">
             <p style="color: red">
                 Event Data
@@ -55,3 +55,4 @@ setTimeout(() => {
 if (localStorage.getItem('hp') != 'yes2') {
   localStorage.setItem('prjcts12','No Projects Found!')
 }
+
